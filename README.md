@@ -62,6 +62,27 @@ Our script supports real-time visualization of losses and segmentation results.
 
 ---
 
+## 🛠️ Requirements
+
+
+### Software & Environment
+- **Operating System**: Linux (Ubuntu 18.04/20.04 recommended) or Windows 10/11.
+- **Python**: 3.8 or 3.9.
+- **CUDA**: 11.0 or higher.
+- **cuDNN**: Compatible with your CUDA version.
+
+### Python Dependencies
+The following core libraries are required:
+- `torch>=1.7.0`: Core deep learning framework.
+- `torchvision>=0.8.0`: Image processing and pretrained backbones.
+- `numpy>=1.19.0`: Numerical operations.
+- `tqdm>=4.50.0`: Progress bar for training/validation.
+- `tensorboard>=2.4.0`: Real-time monitoring and visualization.
+- `matplotlib>=3.3.0`: Plotting and IoU visualization.
+- `Pillow>=8.0.0`: Image loading and manipulation.
+
+
+---
 
 
 ## 🚀 Dataset Access
