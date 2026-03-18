@@ -5,15 +5,68 @@
 [![Organization](https://img.shields.io/badge/OSU-GDA_Group-red.svg)](https://u.osu.edu/qin.324/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-This is the official repository for the dataset presented in our **IEEE TGRS 2025** paper: *"Synthetic Data Matters: Re-training with Geo-typical Synthetic Labels for Building Detection"*. 
+This is the official repository for the Code & Dataset presented in our **IEEE TGRS 2025** paper: *"Synthetic Data Matters: Re-training with Geo-typical Synthetic Labels for Building Detection"*. 
 
 Our work introduces a high-fidelity geotypical synthetic dataset specifically designed for building extraction and domain adaptation in remote sensing.
 
 ---
 
+## 📂 Repository Structure
+
+```text
+.
+├── dataset/                  # Dataset loaders (CityEngine, Target, GDA)
+├── model/                    # Architectures (CLAN_G, CLAN_D, HRNetV2, etc.)
+├── utils/                    # Loss functions and visualization tools
+├── CLAN_iou.py               # IoU evaluation metrics
+├── CLAN_train_with_synthetic.py  # DA training script
+├── CLAN_train_wo_synthetic.py    # Baseline training script
+└── requirements.txt          # torch>=1.7.0, torchvision, tqdm, etc.
+```
+
+---
+
+## 🛠️ Installation & Training
+
+### 1. Requirements
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Download Data
+```bash
+huggingface-cli download GDAOSU/Geotypical_Synthetic_Dataset --include "building_dataset.zip" --local-dir ./
+unzip building_dataset.zip -d ./building_dataset
+```
+
+### 3. Training
+```bash
+# Example: Training with HRNetV2OCR
+python CLAN_train_with_synthetic.py --model HRNetV2OCR --source DSTL_building --adapter Syntheworld --target chicagoAll
+```
+
+---
+
+## 📈 Monitoring with TensorBoard
+
+Our script supports real-time visualization of losses and segmentation results.
+
+1.  **Launch TensorBoard**:
+    ```bash
+    tensorboard --logdir=snapshots --port=6006
+    ```
+2.  **View in Browser**: Open `http://localhost:6006`.
+3.  **What to check**:
+    * **Scalars**: Track `loss_seg`, `loss_adv`, and `mIoU` for both source and target domains.
+    * **Images**: Under the `Images` tab, you can view real-time visual comparisons between `input`, `label`, and `pred` for both domains.
+
+---
+
+
+
 ## 🚀 Dataset Access
 
-The dataset (~4GB) is hosted on **Hugging Face Datasets** for stable distribution and version control.
+The dataset (~17GB) is hosted on **Hugging Face Datasets** for stable distribution and version control.
 
 ### [👉 Click here to access the Dataset](https://huggingface.co/datasets/GDAOSU/Geotypical_Synthetic_Dataset)
 
