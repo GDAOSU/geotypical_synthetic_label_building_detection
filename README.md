@@ -5,7 +5,10 @@
 [![Organization](https://img.shields.io/badge/OSU-GDA_Group-red.svg)](https://u.osu.edu/qin.324/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-This is the official repository for the Code & Dataset presented in our **IEEE TGRS 2025** paper: *"Synthetic Data Matters: Re-training with Geo-typical Synthetic Labels for Building Detection"*. 
+
+
+This is the official repository for the code and dataset of our **IEEE TGRS 2025** paper: [**"Synthetic Data Matters: Re-training with Geo-typical Synthetic Labels for Building Detection"**](https://ieeexplore.ieee.org/abstract/document/11104119).
+
 
 Our work introduces a high-fidelity geotypical synthetic dataset specifically designed for building extraction and domain adaptation in remote sensing.
 
