@@ -2,7 +2,7 @@
 
 [![Paper](https://img.shields.io/badge/IEEE_TGRS-Paper-blue.svg)](https://arxiv.org/abs/2507.16657)
 [![Dataset](https://img.shields.io/badge/Hugging_Face-Dataset-yellow.svg)](https://huggingface.co/datasets/GDAOSU/Geotypical_Synthetic_Dataset)
-[![Organization](https://img.shields.io/badge/OSU-GDA_Group-red.svg)](https://ceg.osu.edu/labs/gda)
+[![Organization](https://img.shields.io/badge/OSU-GDA_Group-red.svg)](https://u.osu.edu/qin.324/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 This is the official repository for the dataset presented in our **IEEE TGRS 2025** paper: *"Synthetic Data Matters: Re-training with Geo-typical Synthetic Labels for Building Detection"*. 
